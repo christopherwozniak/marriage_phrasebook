@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.marriage_phrasebook">
+    package="com.krzysztofwozniak.marriage_phrasebook">
    <application
         android:label="marriage_phrasebook"
         android:name="${applicationName}"
