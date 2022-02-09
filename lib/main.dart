@@ -1,12 +1,24 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:marriage_phrasebook/features/auth/pages/auth_gate.dart';
+import 'firebase_options.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,7 +26,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const RootPage());
+        home: const AuthGate());
   }
 }
 
@@ -47,7 +59,7 @@ class _RootPageState extends State<RootPage> {
             Padding(padding: EdgeInsets.all(20)),
             Text(
                 'Wracasz do domu, i juz w progu słyszysz, ze Twej drugiej połówce coś się nie podoba? Znowu ta sama odzywka? To nic, inni mają gorzej! Podziel się co dziś usłyszałeś'),
-            Text('Zarejestruj się')
+            InkWell(child: Text('Wpisz magiczne słowo od Ukochanej '))
           ],
         ));
   }
