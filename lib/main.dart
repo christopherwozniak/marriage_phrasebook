@@ -59,7 +59,7 @@ class _RootPageState extends State<RootPage> {
             Padding(padding: EdgeInsets.all(20)),
             Text(
                 'Wracasz do domu, i juz w progu słyszysz, ze Twej drugiej połówce coś się nie podoba? Znowu ta sama odzywka? To nic, inni mają gorzej! Podziel się co dziś usłyszałeś'),
-            InkWell(child: Text('Wpisz magiczne słowo od Ukochanej '))
+            InkWell(child: Text('Wpisz magiczne słowo od Ukochanej ')),
           ],
         ));
   }

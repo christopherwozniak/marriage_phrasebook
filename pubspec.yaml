@@ -39,6 +39,7 @@ dependencies:
   bloc: ^8.0.2
   flutterfire_ui: ^0.3.1
   cloud_firestore: ^3.1.5
+  google_fonts: ^2.3.0
   
 
 dev_dependencies:
